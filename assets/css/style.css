@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     color: #888;
     line-height: 30px;
@@ -184,4 +184,36 @@ only screen and (                min-resolution: 2dppx) {
 
 .eres,.tipo,.civil,.respuesta{
 	display: flex;
+	gap: .5rem;
+}
+
+/* @media screen and (min-width: 768px) {
+	.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2{
+		margin: 0;
+		width: 100%;
+	}
+} */
+
+
+.s{
+	display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.form-group.paso2{
+	margin-bottom: 15px;
+    display: flex;
+    background: rgba(128, 128, 128, 0.308);
+    padding: 1rem;
+	width: 48%;
+}
+
+.persona1{
+	display: flex;
+    gap: 2rem;
+}
+.form-group.dato{
+	flex:1
 }

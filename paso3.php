@@ -5,6 +5,17 @@ session_start();
 $name = $_SESSION['name'];
 $count = $_SESSION['count'];
 $area = $_SESSION['area'];
+
+
+$nombreuno = $_SESSION['nombreuno'];
+$nombredos = $_SESSION['nombredos'];
+$nombretres = $_SESSION['nombretres'];
+
+$nombrecuatro = $_SESSION['nombrecuatro'];
+$nombrecinco = $_SESSION['nombrecinco'];
+
+
+
 $imagen1 = $_SESSION['imagen1'];
 $imagen2 = $_SESSION['imagen2'];
 
@@ -64,7 +75,18 @@ session_destroy();
 <body>
     <h2>¡Gracias por enviar el formulario!</h2>
     <p>A continuación se muestran los datos que enviaste:</p>
+    <h2>Nombres de la empresa</h2>
     <ul>
+        <li><?php echo $nombreuno; ?></li>
+        <li><?php echo $nombredos; ?></li>
+        <li><?php echo $nombretres; ?></li>
+        <li><?php echo $nombrecuatro; ?></li>
+        <li><?php echo $nombrecinco?$nombrecinco:"no hay nombre"; ?></li>
+        
+    </ul>
+
+    <ul>
+
         <li>Nombre: <?php echo $name; ?></li>
         <li>count: <?php echo $count; ?></li>
         <li>area: <?php echo $area; ?></li>

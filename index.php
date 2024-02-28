@@ -8,7 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $_SESSION['name'] = $_POST['name'];
     $_SESSION['count'] = $_POST['count'];
     $_SESSION['area'] = $_POST['area'];
-
+    $_SESSION['nombreuno'] = $_POST['nombreuno'];
+    $_SESSION['nombredos'] = $_POST['nombredos'];
+    $_SESSION['nombretres'] = $_POST['nombretres'];
+    $_SESSION['nombrecuatro'] = $_POST['nombrecuatro'];
+    $_SESSION['nombrecinco'] = $_POST['nombrecinco'];
     // Redireccionar al siguiente paso
     header("Location: paso2.php");
 
@@ -169,32 +173,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                 <br>
 
 
-<h2>ingrese e 3 a 5 posibles nombres</h2>
+<h2>ingrese e 3 a 5 posibles nombres segun su prioridad</h2>
 
 <div class="form-group">
 
     <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-    <input type="text" name="personauno" placeholder="persona 1" class="f1-first-name form-control" id="f1-first-name" required>
+    <input type="text" name="nombreuno" placeholder="nombre 1" class="f1-first-name form-control" id="f1-first-name" required>
 </div>
 <div class="form-group">
     <label class="sr-only" for="f1-last-name">count</label>
-    <input  required type="text" name="personados" placeholder="persona 2" class="f1-last-name form-control" id="f1-last-name">
+    <input  required type="text" name="nombredos" placeholder="nombre 2" class="f1-last-name form-control" id="f1-last-name">
 </div>
 <div class="form-group">
 <label class="sr-only" for="f1-last-name">area</label>
-    <input type="text"  required  name="personatres" placeholder="persona 3" class="f1-last-name form-control" id="f1-last-name">
+    <input type="text"  required  name="nombretres" placeholder="nombre 3" class="f1-last-name form-control" id="f1-last-name">
 </div>
 
 <div class="form-group">
 <label class="sr-only" for="f1-last-name">area</label>
-    <input type="text" name="personacuatro" placeholder="persona 4" class="f1-last-name form-control" id="f1-last-name" >
+    <input type="text" name="nombrecuatro" placeholder="nombre 4" class="f1-last-name form-control" id="f1-last-name" >
 </div>
 
 
 
 <div class="form-group">
 <label class="sr-only" for="f1-last-name">area</label>
-    <input type="text" name="personacinco" placeholder="persona 5" class="f1-last-name form-control" id="f1-last-name" >
+    <input type="text" name="nombrecinco" placeholder="nombre 5" class="f1-last-name form-control" id="f1-last-name" >
 </div>
 
 
@@ -205,22 +209,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                             <!--fin del paso 1 -->
 
                                             <!---paso 2 -->
-                                            <fieldset>
+                                            <fieldset class="">
                              
-                             <div class="form-group">
+
+<div class="s">
+<div class="form-group paso2">
 
                             
-                             <label for="opcion1" class="" for="f1-email">EIRL</label>
-                             <input type="radio" id="opcion1" name="tipo" value="eirl" class="f1-email form-control" required>
+<label for="opcion1" class="" for="f1-email">EIRL</label>
+<input type="radio" id="opcion1" name="tipo" value="eirl" class="f1-email form-control" required>
 
 
 
-                            
-                             </div>
 
-                             <div class="form-group">
+</div>
 
-                            
+<div class="form-group paso2">
+
+
 <label for="opcion1" class="" for="f1-email">SRC</label>
 <input type="radio" id="opcion1" name="tipo" value="src" class="f1-email form-control" >
 
@@ -230,9 +236,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 </div>
 
 
-<div class="form-group">
+<div class="form-group paso2">
 
-                            
+
 <label for="opcion1" class="" for="f1-email">SAC</label>
 <input type="radio" id="opcion1" name="tipo" value="sac" class="f1-email form-control" >
 
@@ -243,9 +249,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
-<div class="form-group">
+<div class="form-group paso2">
 
-                            
+
 <label for="opcion1" class="" for="f1-email">SACS</label>
 <input type="radio" id="opcion1" name="tipo" value="sacs" class="f1-email form-control" checked >
 
@@ -253,6 +259,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 </div>
+
+
+</div>
+
+
+
+    
                             
                              <div class="f1-buttons">
                                  <button type="button" class="btn btn-previous">Atrás</button>
@@ -268,14 +281,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 <!---paso 3 -->
 <fieldset>
                              
-<div class="form-group">
+<!-- <div class="form-group">
                                  <label class="sr-only" for="f1-last-name">count</label>
                                  <input  required type="text" name="actividades" placeholder="actividades de tu empresa" class="f1-last-name form-control" id="f1-last-name">
-                             </div>
+                             </div> -->
 
 
 
-
+<h2 class="paso3">actividades de tu empresa</h2>
 
                              <div class="form-group">
                             <textarea required  name="describir" id="" cols="30" rows="10" placeholder="Describir actividades" class="f1-last-name form-control"></textarea>
@@ -305,7 +318,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
  <fieldset>
                                 
         <div class="eres">
-        <div class="form-group">
+        <div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">si soy socio</label>
@@ -317,8 +330,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 </div>
 
 
-
-<div class="form-group">
+<div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">no soy socio</label>
@@ -364,7 +376,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                 </div>
 
 
+
+
+
+                                <div class="form-group">
+
+<label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
+<input type="text" name="persona1correo" placeholder="numero de la persona 1" class="f1-first-name form-control" id="f1-first-name" required>
 </div>
+
+
+
+
+
+
+
 
 
 
@@ -392,11 +418,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 </div>
 
 
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="general2">
+
+
 <!--tipo documento-->
 
 <div class="tipo">
 
-<div class="form-group">
+<div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">DNI</label>
@@ -409,7 +450,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
-<div class="form-group">
+<div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">PASS</label>
@@ -423,7 +464,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
-<div class="form-group">
+<div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">CE</label>
@@ -436,7 +477,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
-<div class="form-group">
+<div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">PTP</label>
@@ -451,7 +492,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
-<div class="form-group">
+<div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">RUC</label>
@@ -485,7 +526,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 <div class="civil">
 
 
-<div class="form-group">
+<div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">soltero(a)</label>
@@ -499,7 +540,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
-<div class="form-group">
+<div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">casado(a)</label>
@@ -512,7 +553,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
-<div class="form-group">
+<div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">viudo(a)</label>
@@ -527,7 +568,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
-<div class="form-group">
+<div class="form-group dato">
 
                                
 <label for="opcion1" class="" for="f1-email">divorciado(a)</label>
@@ -686,6 +727,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
+</div>
+
+
 
 
 
@@ -720,1552 +764,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 <hr>
-
-
-
-        <div class="persona2">
-
-<!--datos necesario-->
-
-<div class="general">
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona2nombre" placeholder="nombre de la persona 2" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-
-
-                                <div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona2apellido" placeholder="apellido de la persona 2" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-
-
-                                <div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona2correo" placeholder="correo de la persona 2" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-</div>
-
-
-
-
-
-        <!--  select-->                        
-
-        <div class="form-group">
-
-<label class="" for="f1-first-name">Que cargo tendra en la empresa</label>
-
-
-
-<select id="opciones" name="cargo2" required class="f1-first-name form-control select">
-   
-    <option value="gerente general">gerente general</option>
-    <option value="subgerente">subgerente</option>
-    <option value="sin cargo">sin cargo</option>
-  </select>
-
-
-
-
-
-</div>
-
-
-<!--tipo documento-->
-
-<div class="tipo">
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">DNI</label>
-<input type="radio" id="opcion1" name="documento2" value="dni" class="f1-email form-control" checked>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PASS</label>
-<input type="radio" id="opcion1" name="documento2" value="pass" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">CE</label>
-<input type="radio" id="opcion1" name="documento2" value="ce" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PTP</label>
-<input type="radio" id="opcion1" name="documento2" value="ptp" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">RUC</label>
-<input type="radio" id="opcion1" name="documento2" value="ruc" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-<!--numero documento-->
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="numero2" placeholder="numero de documento de la persona2" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-<!--  estado civil -->
-
-
-<div class="civil">
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">soltero(a)</label>
-<input type="radio" id="opcion2" name="civil2" value="soltero" class="f1-email form-control"  checked>
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">casado(a)</label>
-<input type="radio" id="opcion2" name="civil2" value="casado" class="f1-email form-control" data-casado>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">viudo(a)</label>
-<input type="radio" id="opcion2" name="civil2" value="viudo" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">divorciado(a)</label>
-<input type="radio" id="opcion2" name="civil2" value="divorceado" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-</div>
-
-
-<!--  si eres casado -->
-
-<div class="visible-2">
-<div class="separacion">
-
-<p>cuentas con separcion de bienes</p>
-<div class="respuesta">
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">si</label>
-<input type="radio" id="opcion1" name="bienes2" value="si" class="f1-email form-control"  checked>
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">no</label>
-<input type="radio" id="opcion1" name="bienes2" value="no" class="f1-email form-control" >
-
-
-
-
-</div>
-</div>
-
-</div>
-
-<div class="conyugue">
-    <p>datos de tu conyugue</p>
-
-
-    <div class="tipo">
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">DNI</label>
-<input type="radio" id="opcion1" name="conyugued2" value="dni" class="f1-email form-control" checked>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PASS</label>
-<input type="radio" id="opcion1" name="conyugued2" value="pass" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">CE</label>
-<input type="radio" id="opcion1" name="conyugued2" value="ce" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PTP</label>
-<input type="radio" id="opcion1" name="conyugued2" value="ptp" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">RUC</label>
-<input type="radio" id="opcion1" name="conyugued2" value="ruc" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-<!--numero documento-->
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="conyuguen2" placeholder="numero de documento de la conyugue" class="f1-first-name form-control" id="f1-first-name" >
-                                </div>
-
-
-
-
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-
-<hr>
-
-
-
-
-
-
-
-
-
-<div class="persona3">
-
-<!--datos necesario-->
-
-<div class="general">
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona3nombre" placeholder="nombre de la persona 3" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-
-
-                                <div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona3apellido" placeholder="apellido de la persona 3" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-
-
-                                <div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona3correo" placeholder="correo de la persona 3" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-</div>
-
-
-
-
-
-        <!--  select-->                        
-
-        <div class="form-group">
-
-<label class="" for="f1-first-name">Que cargo tendra en la empresa</label>
-
-
-
-<select id="opciones" name="cargo3" required class="f1-first-name form-control select">
-   
-    <option value="gerente general">gerente general</option>
-    <option value="subgerente">subgerente</option>
-    <option value="sin cargo">sin cargo</option>
-  </select>
-
-
-
-
-
-</div>
-
-
-<!--tipo documento-->
-
-<div class="tipo">
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">DNI</label>
-<input type="radio" id="opcion1" name="documento3" value="dni" class="f1-email form-control" checked>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PASS</label>
-<input type="radio" id="opcion1" name="documento3" value="pass" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">CE</label>
-<input type="radio" id="opcion1" name="documento3" value="ce" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PTP</label>
-<input type="radio" id="opcion1" name="documento3" value="ptp" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">RUC</label>
-<input type="radio" id="opcion1" name="documento3" value="ruc" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-<!--numero documento-->
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="numero3" placeholder="numero de documento de la persona2" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-<!--  estado civil -->
-
-
-<div class="civil">
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">soltero(a)</label>
-<input type="radio" id="opcion2" name="civil3" value="soltero" class="f1-email form-control"  checked>
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">casado(a)</label>
-<input type="radio" id="opcion2" name="civil3" value="casado" class="f1-email form-control" data-casado>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">viudo(a)</label>
-<input type="radio" id="opcion2" name="civil3" value="viudo" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">divorciado(a)</label>
-<input type="radio" id="opcion2" name="civil3" value="divorceado" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-</div>
-
-
-<!--  si eres casado -->
-
-<div class="visible-3">
-<div class="separacion">
-
-<p>cuentas con separcion de bienes</p>
-<div class="respuesta">
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">si</label>
-<input type="radio" id="opcion1" name="bienes3" value="si" class="f1-email form-control"  checked>
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">no</label>
-<input type="radio" id="opcion1" name="bienes3" value="no" class="f1-email form-control" >
-
-
-
-
-</div>
-</div>
-
-</div>
-
-<div class="conyugue">
-    <p>datos de tu conyugue</p>
-
-
-    <div class="tipo">
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">DNI</label>
-<input type="radio" id="opcion1" name="conyugued3" value="dni" class="f1-email form-control" checked>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PASS</label>
-<input type="radio" id="opcion1" name="conyugued3" value="pass" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">CE</label>
-<input type="radio" id="opcion1" name="conyugued3" value="ce" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PTP</label>
-<input type="radio" id="opcion1" name="conyugued3" value="ptp" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">RUC</label>
-<input type="radio" id="opcion1" name="conyugued3" value="ruc" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-<!--numero documento-->
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="conyuguen3" placeholder="numero de documento de la conyugue" class="f1-first-name form-control" id="f1-first-name" >
-                                </div>
-
-
-
-
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-
-
-
-        <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="persona4">
-
-<!--datos necesario-->
-
-<div class="general">
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona4nombre" placeholder="nombre de la persona 4" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-
-
-                                <div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona4apellido" placeholder="apellido de la persona 4" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-
-
-                                <div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona4correo" placeholder="correo de la persona 4" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-</div>
-
-
-
-
-
-        <!--  select-->                        
-
-        <div class="form-group">
-
-<label class="" for="f1-first-name">Que cargo tendra en la empresa</label>
-
-
-
-<select id="opciones" name="cargo4" required class="f1-first-name form-control select">
-   
-    <option value="gerente general">gerente general</option>
-    <option value="subgerente">subgerente</option>
-    <option value="sin cargo">sin cargo</option>
-  </select>
-
-
-
-
-
-</div>
-
-
-<!--tipo documento-->
-
-<div class="tipo">
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">DNI</label>
-<input type="radio" id="opcion1" name="documento4" value="dni" class="f1-email form-control" checked>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PASS</label>
-<input type="radio" id="opcion1" name="documento4" value="pass" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">CE</label>
-<input type="radio" id="opcion1" name="documento4" value="ce" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PTP</label>
-<input type="radio" id="opcion1" name="documento4" value="ptp" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">RUC</label>
-<input type="radio" id="opcion1" name="documento4" value="ruc" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-<!--numero documento-->
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="numero4" placeholder="numero de documento de la persona2" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-<!--  estado civil -->
-
-
-<div class="civil">
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">soltero(a)</label>
-<input type="radio" id="opcion2" name="civil4" value="soltero" class="f1-email form-control"  checked>
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">casado(a)</label>
-<input type="radio" id="opcion2" name="civil4" value="casado" class="f1-email form-control" data-casado>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">viudo(a)</label>
-<input type="radio" id="opcion2" name="civil4" value="viudo" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">divorciado(a)</label>
-<input type="radio" id="opcion2" name="civil4" value="divorceado" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-</div>
-
-
-<!--  si eres casado -->
-
-<div class="visible-4">
-<div class="separacion">
-
-<p>cuentas con separcion de bienes</p>
-<div class="respuesta">
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">si</label>
-<input type="radio" id="opcion1" name="bienes4" value="si" class="f1-email form-control"  checked>
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">no</label>
-<input type="radio" id="opcion1" name="bienes4" value="no" class="f1-email form-control" >
-
-
-
-
-</div>
-</div>
-
-</div>
-
-<div class="conyugue">
-    <p>datos de tu conyugue</p>
-
-
-    <div class="tipo">
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">DNI</label>
-<input type="radio" id="opcion1" name="conyugued4" value="dni" class="f1-email form-control" checked>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PASS</label>
-<input type="radio" id="opcion1" name="conyugued4" value="pass" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">CE</label>
-<input type="radio" id="opcion1" name="conyugued4" value="ce" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PTP</label>
-<input type="radio" id="opcion1" name="conyugued4" value="ptp" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">RUC</label>
-<input type="radio" id="opcion1" name="conyugued4" value="ruc" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-<!--numero documento-->
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="conyuguen4" placeholder="numero de documento de la conyugue" class="f1-first-name form-control" id="f1-first-name" >
-                                </div>
-
-
-
-
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-
-
-
-
-<hr>
-
-
-
-
-
-
-
-
-<div class="persona5">
-
-<!--datos necesario-->
-
-<div class="general">
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona5nombre" placeholder="nombre de la persona 5" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-
-
-                                <div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona5apellido" placeholder="apellido de la persona 5" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-
-
-                                <div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="persona5correo" placeholder="correo de la persona 5" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-</div>
-
-
-
-
-
-        <!--  select-->                        
-
-        <div class="form-group">
-
-<label class="" for="f1-first-name">Que cargo tendra en la empresa</label>
-
-
-
-<select id="opciones" name="cargo5" required class="f1-first-name form-control select">
-   
-    <option value="gerente general">gerente general</option>
-    <option value="subgerente">subgerente</option>
-    <option value="sin cargo">sin cargo</option>
-  </select>
-
-
-
-
-
-</div>
-
-
-<!--tipo documento-->
-
-<div class="tipo">
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">DNI</label>
-<input type="radio" id="opcion1" name="documento5" value="dni" class="f1-email form-control" checked>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PASS</label>
-<input type="radio" id="opcion1" name="documento5" value="pass" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">CE</label>
-<input type="radio" id="opcion1" name="documento5" value="ce" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PTP</label>
-<input type="radio" id="opcion1" name="documento5" value="ptp" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">RUC</label>
-<input type="radio" id="opcion1" name="documento5" value="ruc" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-<!--numero documento-->
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="numero5" placeholder="numero de documento de la persona2" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
-
-
-<!--  estado civil -->
-
-
-<div class="civil">
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">soltero(a)</label>
-<input type="radio" id="opcion2" name="civil5" value="soltero" class="f1-email form-control"  checked>
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">casado(a)</label>
-<input type="radio" id="opcion2" name="civil5" value="casado" class="f1-email form-control" data-casado>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">viudo(a)</label>
-<input type="radio" id="opcion2" name="civil5" value="viudo" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">divorciado(a)</label>
-<input type="radio" id="opcion2" name="civil5" value="divorceado" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-</div>
-
-
-<!--  si eres casado -->
-
-<div class="visible-5">
-<div class="separacion">
-
-<p>cuentas con separcion de bienes</p>
-<div class="respuesta">
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">si</label>
-<input type="radio" id="opcion1" name="bienes5" value="si" class="f1-email form-control"  checked>
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">no</label>
-<input type="radio" id="opcion1" name="bienes5" value="no" class="f1-email form-control" >
-
-
-
-
-</div>
-</div>
-
-</div>
-
-<div class="conyugue">
-    <p>datos de tu conyugue</p>
-
-
-    <div class="tipo">
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">DNI</label>
-<input type="radio" id="opcion1" name="conyugued5" value="dni" class="f1-email form-control" checked>
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PASS</label>
-<input type="radio" id="opcion1" name="conyugued5" value="pass" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">CE</label>
-<input type="radio" id="opcion1" name="conyugued5" value="ce" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">PTP</label>
-<input type="radio" id="opcion1" name="conyugued5" value="ptp" class="f1-email form-control"  >
-
-
-
-
-</div>
-
-
-
-
-
-<div class="form-group">
-
-                               
-<label for="opcion1" class="" for="f1-email">RUC</label>
-<input type="radio" id="opcion1" name="conyugued5" value="ruc" class="f1-email form-control" >
-
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-
-<!--numero documento-->
-
-<div class="form-group">
-
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="conyuguen5" placeholder="numero de documento de la conyugue" class="f1-first-name form-control" id="f1-first-name" >
-                                </div>
-
-
-
-
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-        </div>
-
 
 
 
