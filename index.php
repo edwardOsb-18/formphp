@@ -103,10 +103,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
                     	
 
-                        <form  role="form" method="post" class="f1"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  enctype="multipart/form-data">
+                        <form  role="form" method="post" class="f1 f1__osb"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  enctype="multipart/form-data">
 
-                        <h3>Registrar Nuevo Inmueble</h3>
-                    		<div class="f1-steps">
+                        
+                    		<div class="f1-steps f1-steps-osb">
                     			<div class="f1-progress">
                     			    <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
                     			</div>
@@ -154,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                     		
                             <!--paso 1 -->
                             <fieldset>
-                                <br>
+                            
                     			<!-- <div class="form-group">
 
                                 
@@ -170,11 +170,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                     <input type="text" name="area" placeholder="Ubicación del Inmueble" class="f1-last-name form-control" id="f1-last-name">
                                 </div> -->
 
-                                <br>
+                               
+<div class="grupo__paso1">
 
+<h2 class="paso1__titulo">ingrese e 3 a 5 posibles nombres segun su prioridad</h2>
 
-<h2>ingrese e 3 a 5 posibles nombres segun su prioridad</h2>
-
+<div class="grupo2__paso1">
 <div class="form-group">
 
     <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
@@ -184,6 +185,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     <label class="sr-only" for="f1-last-name">count</label>
     <input  required type="text" name="nombredos" placeholder="nombre 2" class="f1-last-name form-control" id="f1-last-name">
 </div>
+</div>
+
+
+
+<div class="grupo3__paso1">
 <div class="form-group">
 <label class="sr-only" for="f1-last-name">area</label>
     <input type="text"  required  name="nombretres" placeholder="nombre 3" class="f1-last-name form-control" id="f1-last-name">
@@ -193,26 +199,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 <label class="sr-only" for="f1-last-name">area</label>
     <input type="text" name="nombrecuatro" placeholder="nombre 4" class="f1-last-name form-control" id="f1-last-name" >
 </div>
-
-
-
-<div class="form-group">
-<label class="sr-only" for="f1-last-name">area</label>
-    <input type="text" name="nombrecinco" placeholder="nombre 5" class="f1-last-name form-control" id="f1-last-name" >
 </div>
 
 
-                                <div class="f1-buttons">
+<div class="grupo4__paso1">
+    
+<div class="form-group ult">
+<label class="sr-only" for="f1-last-name">area</label>
+    <input type="text" name="nombrecinco" placeholder="nombre 5" class="f1-last-name form-control" id="f1-last-name" >
+</div>
+</div>
+
+
+
+
+<div class="f1-buttons">
                                     <button type="button" class="btn btn-next">Siguiente</button>
-                                </div>
-                            </fieldset>
+  </div>
+
+</div>
+
+
+</fieldset>
                             <!--fin del paso 1 -->
+
+
+
+
+
 
                                             <!---paso 2 -->
                                             <fieldset class="">
-                             
+                             <div class="grupo_paso2">
+                    <h2 class=" paso1__titulo">titulo</h2>
 
-<div class="s">
+                             <div class="s">
 <div class="form-group paso2">
 
                             
@@ -271,6 +292,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                  <button type="button" class="btn btn-previous">Atrás</button>
                                  <button type="button" class="btn btn-next">Siguiente</button>
                              </div>
+
+
+
+
+                             </div>
+
+
                          </fieldset>
                          <!--fin del paso 2 -->
 
@@ -287,8 +315,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                              </div> -->
 
 
+<div class="grupo__paso3">
 
-<h2 class="paso3">actividades de tu empresa</h2>
+<h2 class="paso3 paso1__titulo">actividades de tu empresa</h2>
 
                              <div class="form-group">
                             <textarea required  name="describir" id="" cols="30" rows="10" placeholder="Describir actividades" class="f1-last-name form-control"></textarea>
@@ -299,6 +328,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                  <button type="button" class="btn btn-previous">Atrás</button>
                                  <button type="button" class="btn btn-next">Siguiente</button>
                              </div>
+
+</div>
+
+
+
                          </fieldset>
                          <!--fin del paso 3 -->
 
@@ -316,7 +350,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
  <!---paso 4 -->
  <fieldset>
-                                
+               <h2 class="paso1__titulo">titulo</h2>                 
         <div class="eres">
         <div class="form-group dato">
 
@@ -763,7 +797,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
-<hr>
 
 
 
@@ -823,7 +856,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 <div class="persona1__capital">
 
 <p>persona1</p>
-                                <div class="form-group">
+
+
+<div class="grupo__paso5">
+
+<div class="form-group">
                                     <label class="sr-only" for="f1-last-name">count</label>
                                     <input  required type="number" name="efectivo1" placeholder="capital en efectivo" class="f1-last-name form-control" id="f1-last-name">
                                 </div>
@@ -832,17 +869,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                     <input type="number"  required  name="cbienes1" placeholder="capital en bienes" class="f1-last-name form-control" id="f1-last-name">
                                 </div>
 
+</div>   
+
+
+
+                              
+
 
 
                                 <p>Registrar bien</p>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                 <label class="sr-only" for="f1-last-name">area</label>
                                     <input type="number" name="cantidadbien1" placeholder="cantidad" class="f1-last-name form-control" id="f1-last-name" >
-                                </div>
+                                </div> -->
+
+
+<div class="grupo1__paso5">
 
 
 
-                                <div class="form-group">
+<div class="grupo2__papso5">
+
+
+<div class="form-group">
                                 <label class="sr-only" for="f1-last-name">area</label>
                                     <input type="number" name="preciobien1" placeholder="precio unitario en soles" class="f1-last-name form-control" id="f1-last-name" >
                                 </div>
@@ -852,6 +901,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                 <label class="sr-only" for="f1-last-name">area</label>
                                     <input type="text" name="marca1" placeholder="ingrese marca y modelo" class="f1-last-name form-control" id="f1-last-name" >
                                 </div>
+</div>
+
+
 
 
 
@@ -861,35 +913,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                 </div>
 
 
-                                <hr>
 
 
 
 
-                                <div class="form-group">
-                                <label class="sr-only" for="f1-last-name">area</label>
-                                    <input type="number" name="cantidadbien12" placeholder="cantidad" class="f1-last-name form-control" id="f1-last-name" >
-                                </div>
 
 
 
-                                <div class="form-group">
-                                <label class="sr-only" for="f1-last-name">area</label>
-                                    <input type="number" name="preciobien12" placeholder="precio unitario en soles" class="f1-last-name form-control" id="f1-last-name" >
-                                </div>
 
 
-                                <div class="form-group">
-                                <label class="sr-only" for="f1-last-name">area</label>
-                                    <input type="text" name="marca12" placeholder="ingrese marca y modelo" class="f1-last-name form-control" id="f1-last-name" >
-                                </div>
+</div>
+                           
 
 
+                        
 
-                                <div class="form-group">
-                                <label class="sr-only" for="f1-last-name">area</label>
-                                    <input type="text" name="model12" placeholder="ingrese numero de modelo" class="f1-last-name form-control" id="f1-last-name" >
-                                </div>
 
 
 
@@ -1378,29 +1416,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
     <fieldset>
-                                     <h2>Ingresa los siguientes datos para la comunicación con Sunat</h2>
 
-                    			<div class="form-group">
+<div class="grupo__paso6">
+<h2>Ingresa los siguientes datos para la comunicación con Sunat</h2>
 
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="personauno" placeholder="correo de la empresa" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
 
-                                <div class="form-group">
+
+<div class="grupo2__paso6">
+
+
+<div class="grupo3__paso6">
+<div class="form-group">
+
+    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
+    <input type="text" name="personauno" placeholder="correo de la empresa" class="f1-first-name form-control" id="f1-first-name" required>
+</div>
+
+<div class="form-group">
 
 <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
 <input type="text" name="personauno" placeholder="celular  o teléfono  de la empresa" class="f1-first-name form-control" id="f1-first-name" required>
 </div>
 
 
+</div>
+
+
+
+
 <div class="form-group">
 
-                    			    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
-                                    <input type="text" name="personauno" placeholder="direccion exacta donde operara la empresa" class="f1-first-name form-control" id="f1-first-name" required>
-                                </div>
+    <label class="sr-only" for="f1-first-name">Nombre del Propietario</label>
+    <input type="text" name="personauno" placeholder="direccion exacta donde operara la empresa" class="f1-first-name form-control" id="f1-first-name" required>
+</div>
 
 
-                               
+
+
+
+</div>
+
+
+
+
+
 
 <div class="empresa__fisico">
 
@@ -1408,9 +1467,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 <h2>el domicilio de la empresa es:</h2>
 
 
+<div class="grupo4__paso6">
 <div class="form-group">
 
-                               
+
 <label for="opcion1" class="" for="f1-email">Alquilado</label>
 <input type="radio" id="opcion1" name="local" value="alquilado" class="f1-email form-control" checked>
 
@@ -1423,16 +1483,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 <div class="form-group">
 
-                               
+
 <label for="opcion1" class="" for="f1-email">propio</label>
 <input type="radio" id="opcion1" name="local" value="propio" class="f1-email form-control"  >
+
+</div>
+
+</div>
+
+
+
 
 <h2>adjuntar rercibo de agua o luz </h2>
 
 <div class="form-group">
-                                    <label class="sr-only" for="f1-facebook">Valor de Inmueble</label>
-                                    <input type="file" name="imagen2"  class="f1-facebook form-control" id="f1-facebook">
-                                </div>
+    <label class="sr-only" for="f1-facebook">Valor de Inmueble</label>
+    <input type="file" name="imagen2"  class="f1-facebook form-control" id="f1-facebook">
+</div>
 
 </div>
 
@@ -1442,7 +1509,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
 
-                             
+
 
 
 
@@ -1453,12 +1520,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 </div>
 
+
+
+<div class="f1-buttons">
+    <button type="button" class="btn btn-previous">Atrás</button>
+    <button type="submit"  name="submit" class="btn btn-submit">Guardar Información</button>
+</div>
+
+</div>
 
                            
-                                <div class="f1-buttons">
-                                    <button type="button" class="btn btn-previous">Atrás</button>
-                                    <button type="submit"  name="submit" class="btn btn-submit">Guardar Información</button>
-                                </div>
                             </fieldset>
                     	
                     	</form>
